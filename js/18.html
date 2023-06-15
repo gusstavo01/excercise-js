@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 18</title>
+</head>
+<body>
+    <script>
+       /*CRIE UMA FUNÇÃO QUE RECEBA UM OBJETO E RETORNE  UMA NOVA FUNÇÃO QUE PERMITE OBTER
+       OU ALTERAR O VALOR DE UMA PROPRIEDADE ESPECIFICA DO OBJETO. A FUNÇÃO DEVE RECEBER UMA INTERFACE
+       SEGURA PARA ACESSAR E MODIFICAR AS PROPRIEDADES DO OBJETO*/
+      function createPropertyAccessor(obj) {
+        return function(property, newValue) {
+            if (newValue !== undefined) {
+            obj[property] = newValue;
+            }
+            return obj[property];
+        };
+        }
+
+        // Exemplo de uso
+        const person = {
+        name: "Gustavo",
+        age: 20,
+        };
+
+        const getProperty = createPropertyAccessor(person);
+
+        console.log(getProperty("name")); // Output: "John"
+        console.log(getProperty("age")); // Output: 30
+
+        getProperty("age", 21); // Altera o valor da propriedade "age" para 31
+
+        console.log(getProperty("age")); // Output: 31
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 13</title>
+</head>
+<body>
+    <script>
+        /*ESCREVA UM FUÇÃO QUE RECEBA UMA MATRIZ DE OBJETOS E RETORNE UM NOVO OBJETO CONTENDO
+        A MÉDIA DOS VALORES DE UMA PROPRIEDADE ESPECIFICA EM TODOS OS OBJETOS*/
+        const pessoa = [
+        { nome: "Gustavo", idade: 20 },
+        { nome: "Pedro", idade: 25 },
+        { nome: "João", idade: 30 }
+        ]
+       function Main(matriz) {
+            let sumAge = 0
+            for(let i = 0; i < matriz.length; i++ ) {
+                sumAge += matriz[i].idade
+            }
+            const averageAge = sumAge / matriz.length
+            return averageAge
+       }
+       console.log(Main(pessoa))
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 11</title>
+</head>
+<body>
+    <script>
+        /*IMPLEMENTE UM FUNÇÃO QUE RECEBA UM OBJETO E RETORNE UMA NOVA FUNÇÃO 
+        QUE PERMITE ADICIONAR NOVAS PROPRIEDADES A ESSE OBJETO APENAS UMA VEZ. TENTATIVAS
+        SUBSEQUENTES DE ADICIONAR A MESMA PROPRIEDADE DEVEM SER IGNORADAS*/
+        const pessoa = {
+             nome:"",
+             idade: null
+        }
+        function Main(obj) {
+            const addedProperties = {};
+            return function(prop) {
+                if (addedProperties.hasOwnProperty(prop)) {
+                    console.log("ESSA PROPRIEDADE JA EXISTE")
+                }else {
+                    obj[prop] = null;
+                    addedProperties[prop] = true;
+                }
+            }
+        }
+        var object = Main(pessoa)
+        console.log(object('altura'))
+        console.log(pessoa)
+        
+    </script>
+</body>
+</html>

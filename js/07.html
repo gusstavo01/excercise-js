@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 07</title>
+</head>
+<body>
+    <script>
+        /*ESCREVA UMA FUNÇÃO QUE VERIFICA SE UM OBJETO TEM DETERMINADA PROPRIEDADE*/
+            pessoa = {
+                 nome: '',
+                 idade: 0,
+                 altura: 0
+        };
+
+        function Check(...obj) {
+        let answer;
+        obj.forEach((element) => {
+            validar = Object.keys(element);
+                 if (validar.includes("nome")) {
+                     answer = "POSSUI A PROPRIEDADE ";
+                } else {
+                     answer = "NÃO POSSUI A PROPRIEDADE ";
+            }
+        });
+        return answer;
+        }
+
+        console.log(Check(pessoa));
+    </script>
+</body>
+</html>

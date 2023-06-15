@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 09</title>
+</head>
+<body>
+    <script>
+/*ESCREVA UMA FUNÇÃO QUE RECEBA UM NUMERO E RETORNE UM NOVO ARRAY
+CONTENDO TODOS OS DIVISORES DESSE NUMERO*/
+         const arrayNumber = []
+         function Main(number) {
+            var count = 1
+             while(count <= number) {
+                const calculo = number / count
+                if(number % count === 0 ) {
+                    arrayNumber.push(count)
+                }
+                count++ 
+           }
+           
+           return arrayNumber;
+    }
+         
+         console.log(Main(6))
+
+    </script>
+</body>
+</html>

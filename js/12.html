@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 12</title>
+</head>
+<body>
+    <script>
+        /*ESCREVA UM STRING CONTENDO UMA EXPRESSAO MATEMATICA VALIDA E RETORNE 
+         O RESULTADO DA EXPRESSAO. A EXPRESSÃO PODE CONTER PARENTESES, OPERADORES AIRITIMETICOS(+ - * /) E
+         NUMEROS INTEIROS */
+
+     function Main(expression) {
+        try {
+            const result = eval(expression)
+            return result
+        }catch(error) {
+            console.log("EXPRESSÃO INVALIDA!", error);
+            return undefined
+        }
+
+            
+        }            
+        console.log(Main("1 + 2 + 3"))
+    </script>
+</body>
+</html>

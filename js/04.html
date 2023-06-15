@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 04</title>
+</head>
+<body>
+    <script>
+        /*Crie uma função que receba um array de numeros e uma função de transformação como parâmetros
+        , e retorne um novo array com os elementos transformados pela função de transformação */
+        function transformArray(array,transformFunction) {
+            var newArray = []
+            for(var i = 0; i < array.length;i++) {
+                var transformedElement = transformFunction(array[i])
+                newArray.push(transformedElement);
+            }
+            return newArray;
+        }
+        function doubleNumber(num) {
+            return num * 2;
+        }
+        var numbers = [1,2,3,4,5]
+        var transformedArray = transformArray(numbers, doubleNumber)
+        console.log(transformedArray);
+    </script>
+</body>
+</html>

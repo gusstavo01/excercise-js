@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 08</title>
+</head>
+<body>
+    <script>
+     /*Crie uma função que receba uma string e retorne uma nova string com todas as vogais em letra maiusculas*/
+     function Main(myString) {
+        const vowels = ['a','e','i','o','u']
+        let newString = ''
+         for (element of myString) {
+          if(vowels.includes(element.toLowerCase())) {
+            newString += element.toUpperCase()
+          }else {
+            newString += element
+          }
+           
+         }
+         return newString
+          }
+          console.log(Main("casa"))
+    </script>
+</body>
+</html>

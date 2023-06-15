@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 05</title>
+</head>
+<body>
+    <script>
+      /*IMPLEMENTE UMA FUNÇÃO QUE RECEBE UM NUMERO E RETORNA UMA NOVAFUNCAO QUE SOMA O NUMERO
+      RECEBIDO COM OUTRO NUMERO */
+      function Main(number) {
+        return function (number2) {
+            return number + number2
+        }
+      }
+      const add20 = Main(10);
+      console.log(add20(20))
+     
+    </script>
+</body>
+</html>

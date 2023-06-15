@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 01</title>
+</head>
+<body>
+    <script>
+        // crie uma função que receba um objeto como parametro e retorne a quantidade de propriedades do objeto
+        pessoa = {
+           nome: "",
+           idade:0,
+           peso:0
+        }
+        function Count(obj) {
+         
+            return Object.keys(obj).length;
+        }
+        console.log(Count(pessoa))
+    </script>
+</body>
+</html>

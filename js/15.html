@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 15</title>
+</head>
+<body>
+    <script>
+        /*ESCREVA UM FUNÇÃO QUE RECEBA UM ARRAY DE OBJETOS E RETORNE UM NOVO ARRAY CONTENDO 
+        APENAS OS OBJETOS UNICOS, OU SEJA, AQUELES QUE NÃO POSSUE PROPRIEDADES IDENTICAS
+        A NENHUM OUTROS OBJETO DO ARRAY*/
+           function getUniqueObjects(arr) {
+            const uniqueObjects = [];
+
+        // Verificar se um objeto é único
+        function isUnique(obj) {
+            for (let i = 0; i < uniqueObjects.length; i++) {
+            if (isEqual(obj, uniqueObjects[i])) {
+                return false;
+            }
+            }
+            return true;
+        }
+
+        // Comparar igualdade entre dois objetos
+        function isEqual(obj1, obj2) {
+            const keys1 = Object.keys(obj1);
+            const keys2 = Object.keys(obj2);
+
+            if (keys1.length !== keys2.length) {
+            return false;
+            }
+
+            for (let i = 0; i < keys1.length; i++) {
+            const key = keys1[i];
+            if (obj1[key] !== obj2[key]) {
+                return false;
+            }
+            }
+
+            return true;
+        }
+
+        // Iterar pelo array de objetos
+        for (let i = 0; i < arr.length; i++) {
+            const obj = arr[i];
+            if (isUnique(obj)) {
+            uniqueObjects.push(obj);
+            }
+        }
+
+        return uniqueObjects;
+        }
+
+        // Exemplo de uso
+        const objects = [
+            { id: 1, name: 'Objeto 1' },
+            { id: 2, name: 'Objeto 2' },
+            { id: 1, name: 'Objeto 1' },
+            { id: 3, name: 'Objeto 3' },
+            { id: 2, name: 'Objeto 2' },
+        ];
+
+        const uniqueObjects = getUniqueObjects(objects);
+        console.log(uniqueObjects);
+
+    </script>
+</body>
+</html>
