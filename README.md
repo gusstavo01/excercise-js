@@ -1,1 +1,1 @@
-# excercise-js
+# My solution for javascript exercises
